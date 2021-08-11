@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - './:/app/django_sandobox'
+    working_dir: '/app/django_sandobox'
+    container_name: django_sandobox
+    privileged: true
+    tty: true
